@@ -1,0 +1,30 @@
+{
+  "name": "beeper-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^5.0.0",
+    "@types/jsonfile": "^6.1.4",
+    "@types/node": "^22.7.2",
+    "@types/uuidv4": "^5.0.0",
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "jsonfile": "^6.1.0",
+    "ts-node": "^10.9.2",
+    "tsc": "^2.0.4",
+    "uuid": "^10.0.0",
+    "uuidv4": "^6.2.13"
+  }
+}
