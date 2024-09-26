@@ -1,1 +1,53 @@
-[{"id":"0f5bd6fc-bf6c-4f52-86aa-7e1286789b9c","name":"tsur","status":"manufactured","createAt":"2024-09-26T09:27:39.741Z"},{"id":"985154a6-e19b-4e0f-9e01-df0884f2f909","name":"tzidon","status":"manufactured","createAt":"2024-09-26T09:27:56.471Z"}]
+[
+  {
+    "id": "0f5bd6fc-bf6c-4f52-86aa-7e1286789b9c",
+    "name": "tsur",
+    "status": "detonated",
+    "createAt": "2024-09-26T09:27:39.741Z",
+    "latitude": 34.59708,
+    "longitude": 35.78674,
+    "detonatedAt": "2024-09-26T14:18:32.360Z"
+  },
+  {
+    "id": "985154a6-e19b-4e0f-9e01-df0884f2f909",
+    "name": "tzidon",
+    "status": "detonated",
+    "createAt": "2024-09-26T09:27:56.471Z",
+    "latitude": 34.59708,
+    "longitude": 35.78674,
+    "detonatedAt": "2024-09-26T14:10:43.157Z"
+  },
+  {
+    "id": "a7b0444e-a55a-4afb-99b3-bb76d8a694cf",
+    "name": "tzidon",
+    "status": "detonated",
+    "createAt": "2024-09-26T14:23:05.459Z",
+    "latitude": 34.59708,
+    "longitude": 35.78674,
+    "detonatedAt": "2024-09-26T14:24:41.871Z"
+  },
+  {
+    "id": "f64dbad7-3e5a-411d-9b2a-b798e305a487",
+    "name": "tzidon",
+    "status": "manufactured",
+    "createAt": "2024-09-26T14:25:37.477Z"
+  },
+  {
+    "id": "3488b68f-2821-4858-b6ac-2b08c1fc4207",
+    "name": "tzidon",
+    "status": "detonated",
+    "createAt": "2024-09-26T14:25:45.614Z",
+    "latitude": 34.59708,
+    "longitude": 35.78674,
+    "detonatedAt": "2024-09-26T14:26:12.190Z"
+  },
+  {
+    "id": "ee120d9b-bc18-46a5-9d73-153beeff3acd",
+    "name": "tzidon",
+    "status": "detonated",
+    "createAt": "2024-09-26T14:45:00.554Z",
+    "latitude": 34.59708,
+    "longitude": 35.78674,
+    "detonatedAt": "2024-09-26T14:50:28.293Z"
+  }
+]
