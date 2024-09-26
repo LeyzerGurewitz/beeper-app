@@ -45,3 +45,31 @@ export const getBeeperById = (beeperId) => __awaiter(void 0, void 0, void 0, fun
     }
     return beeper;
 });
+export const deleteById = (beeperId) => __awaiter(void 0, void 0, void 0, function* () {
+    const beepers = yield readUsersFromFile();
+    if (!beepers) {
+        throw new Error("beepers does not exist");
+    }
+    const beeper = beepers.find(b => b.id === beeperId);
+    if (!beeper) {
+        throw new Error("The beeper was not found");
+    }
+    const index = beepers.findIndex(b => b.id === beeperId);
+    if (index === -1) {
+        throw new Error("No index found");
+    }
+    beepers.splice(index, 1);
+    yield writeUsersToFile(beepers);
+    return beeper;
+});
+export const getBeepersByStatusService = (status) => __awaiter(void 0, void 0, void 0, function* () {
+    const beepers = yield readUsersFromFile();
+    if (!beepers) {
+        throw new Error("beepers does not exist");
+    }
+    const beeperByStatus = beepers.filter(b => b.status === status);
+    if (!beeperByStatus) {
+        throw new Error("The beepers status was not found");
+    }
+    return beeperByStatus;
+});

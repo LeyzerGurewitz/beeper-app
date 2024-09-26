@@ -7,7 +7,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { createBeeper, gatAllBeepersService, getBeeperById } from "../service/beeperService.js";
+import { createBeeper, gatAllBeepersService, getBeeperById, deleteById, getBeepersByStatusService } from "../service/beeperService.js";
 export const createANewBeeper = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const name = req.body.name;
@@ -38,6 +38,32 @@ export const getDetailsOfASpecificBeeper = (req, res) => __awaiter(void 0, void 
         }
         const beeper = yield getBeeperById(beeperId);
         res.status(200).json({ "beeper by id": beeper });
+    }
+    catch (error) {
+        res.status(500).json({ error: "There is a problem with the beeperService" });
+    }
+});
+export const deleteASpecificBeeperById = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const beeperId = req.params.id;
+        if (!beeperId) {
+            res.status(400).json({ error: "beeperId not found" });
+        }
+        const beeper = yield deleteById(beeperId);
+        res.status(200).json({ "beeper by id": beeper });
+    }
+    catch (error) {
+        res.status(500).json({ error: "There is a problem with the beeperService" });
+    }
+});
+export const getBeepersByStatus = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const status = req.params.status;
+        if (!status) {
+            res.status(400).json({ error: "status not found" });
+        }
+        const beepersByStatus = yield getBeepersByStatusService(status);
+        res.status(200).json({ "beeper by status": beepersByStatus });
     }
     catch (error) {
         res.status(500).json({ error: "There is a problem with the beeperService" });
